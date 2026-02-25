@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <ctype.h>
+int main(void)
+{
+ char ch;
+ scanf(" %c", &ch);
+ if (isalpha((unsigned char)ch))
+ { char lower = tolower((unsigned char)ch);
+ if (lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u')
+ printf("Vowel\n");
+ else
+ printf("Consonant\n");
+ }
+ else if (isdigit((unsigned char)ch))
+ printf("Digit\n");
+ else
+ printf("Special Symbol\n");
+ return 0;
+}
